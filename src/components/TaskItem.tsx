@@ -1,11 +1,11 @@
-import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
-import { Button, Card, Tag, Tooltip } from "antd";
+import { EditOutlined } from "@ant-design/icons";
+import { Card, Tag, Tooltip } from "antd";
 import Paragraph from "antd/es/typography/Paragraph";
-import type { ITask } from "../@customTypes/task";
+import type { ITask } from "/src/@customTypes/task";
+import { Link } from "react-router-dom";
 
 type Props = {
   task: ITask;
-  // updateTask: (id: string) => void;
 };
 
 const TaskItem: React.FC<Props> = ({ task }) => {
@@ -13,25 +13,13 @@ const TaskItem: React.FC<Props> = ({ task }) => {
     <>
       <Card
         title={task.title}
-        // style={{ width: 300 }}
+        style={{ width: 300 }}
         extra={
           <>
             <Tooltip title="edit">
-              <Button
-                href="/task/:id"
-                type="default"
-                color="default"
-                variant="text"
-                icon={<EditOutlined />}
-              />
-            </Tooltip>
-            <Tooltip title="delete">
-              <Button
-                type="default"
-                color="default"
-                variant="text"
-                icon={<DeleteOutlined />}
-              />
+              <Link to={"/task/" + task.id}>
+                <EditOutlined />
+              </Link>
             </Tooltip>
           </>
         }

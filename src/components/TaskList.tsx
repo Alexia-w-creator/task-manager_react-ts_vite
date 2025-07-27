@@ -8,7 +8,7 @@ function TaskList() {
   const { tasks } = React.useContext(TaskContext) as TaskContextType;
   return (
     <>
-      <Flex wrap gap="small">
+      <Flex wrap justify='center' gap="small">
         {tasks.map((task_: ITask) => (
           <TaskItem key={task_.id} task={task_} />
         ))}

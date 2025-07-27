@@ -10,6 +10,5 @@ export interface ITask {
 }
 export type TaskContextType = {
   tasks: ITask[];
-  saveTask: (task: ITask) => void;
-  updateTask: (id: string) => void;
+  updateTask: (task: ITask) => void;
 };

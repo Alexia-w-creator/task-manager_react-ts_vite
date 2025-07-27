@@ -1,16 +1,26 @@
-// import { useState } from 'react';
-import './App.css';
-import TaskList from './components/TaskList.tsx';
-import TaskProvider from './context/taskContext.tsx';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Layout from "./components/Layout.tsx";
+import TaskDetails from "./components/TaskDetails.tsx";
+import React from "react";
+import { TaskContext } from "./context/taskContext";
+import type { TaskContextType, ITask } from "/src/@customTypes/task";
 
 function App() {
-  // const [count, setCount] = useState(0)
-
+  const { tasks } = React.useContext(TaskContext) as TaskContextType;
   return (
     <>
-      <TaskProvider>
-        <TaskList />
-      </TaskProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />} />
+          {tasks.map((task_: ITask) => (
+            <Route
+              path={"/task/" + task_.id}
+              element={<TaskDetails task={task_} />}
+            />
+          ))}
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
