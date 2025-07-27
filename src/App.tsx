@@ -4,7 +4,7 @@ import Layout from "./components/Layout.tsx";
 import TaskDetails from "./components/TaskDetails.tsx";
 import React from "react";
 import { TaskContext } from "./context/taskContext";
-import type { TaskContextType, ITask } from "/src/@customTypes/task";
+import type { TaskContextType, ITask } from "./@customTypes/task";
 
 function App() {
   const { tasks } = React.useContext(TaskContext) as TaskContextType;

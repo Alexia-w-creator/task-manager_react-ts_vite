@@ -1,7 +1,7 @@
 import { EditOutlined } from "@ant-design/icons";
 import { Card, Tag, Tooltip } from "antd";
 import Paragraph from "antd/es/typography/Paragraph";
-import type { ITask } from "/src/@customTypes/task";
+import type { ITask } from "../@customTypes/task";
 import { Link } from "react-router-dom";
 
 type Props = {

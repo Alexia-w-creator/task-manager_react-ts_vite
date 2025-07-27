@@ -1,5 +1,5 @@
 import React from "react";
-import type { TaskContextType, ITask } from "/src/@customTypes/task";
+import type { TaskContextType, ITask } from "../@customTypes/task";
 
 export const TaskContext = React.createContext<TaskContextType | null>(null);
 

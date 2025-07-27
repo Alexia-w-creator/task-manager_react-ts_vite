@@ -1,5 +1,5 @@
 import { Button, Form, Input, Select, Space } from "antd";
-import type { TaskContextType, ITask } from "/src/@customTypes/task";
+import type { TaskContextType, ITask } from "../@customTypes/task";
 import { Link } from "react-router-dom";
 import React from "react";
 import { TaskContext } from "../context/taskContext";

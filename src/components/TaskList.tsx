@@ -1,7 +1,7 @@
 import React from "react";
 import TaskItem from "./TaskItem.tsx";
 import { Flex } from "antd";
-import type { TaskContextType, ITask } from "/src/@customTypes/task";
+import type { TaskContextType, ITask } from "../@customTypes/task";
 import { TaskContext } from "../context/taskContext";
 
 function TaskList() {
